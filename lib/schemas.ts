@@ -40,7 +40,7 @@ const ResultCoreSchema = z.object({
   top_type_id: TypeIdSchema,
   second_type_id: TypeIdSchema.nullable(),
   confidence_level: ConfidenceLevelSchema,
-  raw_scores: z.record(TypeIdSchema, z.number()),
+  raw_scores: z.record(z.string(), z.number()),
 });
 
 export const NarrativeRequestSchema = z.object({
